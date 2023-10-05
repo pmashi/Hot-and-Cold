@@ -1,0 +1,23 @@
+.title { 
+    font-size: 72px;
+    position: top;
+    align-items: center;
+}
+
+.playButton { 
+    width: 10.8vmax;
+    height: 3.2vmax;
+    font-size:20px;
+}
+
+.valueButton{
+
+}
+
+.commitButton { 
+     
+}
+
+.resetButton { 
+    
+}
