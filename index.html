@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* body {
-            background:rgb(30, 182, 30);
-        } */
+
     </style>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap">
-    <!-- <script src="script.js"></script> -->
     <title>Document</title>
 </head>
 
@@ -18,11 +15,12 @@
     <h1>Hot and Cold</h1>
 </header>
 
-<body onload="reset();">
-    <div>
-        <button id="playButton">Play</button>
-    </div>
-    <p id="guess">Guess: -1</p>
+<div>
+    <button id="playButton" onclick="reset()">Play</button>
+</div>
+
+<body>    
+    <p id="guess">Guess: </p>
     <p id="guesses">Guesses Left: </p>
     <div>
         <button class="numedit" data-param="-1">-1</button>
