@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            background:green;
-        }
+        /* body {
+            background:rgb(30, 182, 30);
+        } */
     </style>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap">
+    <!-- <script src="script.js"></script> -->
     <title>Document</title>
 </head>
 
-<body>
-    <h1 class="title">Hot and Cold</h1>
-    <button class="playButton" >Play</button>
-</body>
+<header>
+    <h1>Hot and Cold</h1>
+</header>
 
-<body>
-    <p>Guess: </p>
-    <p>Guesses Left: </p>
+<body onload="reset();">
     <div>
-        <button>-1</button>
-        <button>-5</button>
-        <button>-10</button>
-        <button>-25</button>
+        <button id="playButton">Play</button>
+    </div>
+    <p id="guess">Guess: -1</p>
+    <p id="guesses">Guesses Left: </p>
+    <div>
+        <button class="numedit" data-param="-1">-1</button>
+        <button class="numedit" data-param="-5">-5</button>
+        <button class="numedit" data-param="-10">-10</button>
+        <button class="numedit" data-param="-25">-25</button>
     </div>
     <div>
-        <button>+1</button>
-        <button>+5</button>
-        <button>+10</button>
-        <button>+25</button>
+        <button class="numedit" data-param="1">+1</button>
+        <button class="numedit" data-param="5">+5</button>
+        <button class="numedit" data-param="10">+10</button>
+        <button class="numedit" data-param="25">+25</button>
     </div>
-    <button>Commit</button>
-    <button>Reset</button>
+    <button id="commitButton">Commit</button>
+    <button id="resetButton">Reset</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
