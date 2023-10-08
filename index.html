@@ -6,36 +6,38 @@
     <style>
 
     </style>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap">
     <title>Document</title>
 </head>
-
 <header>
     <h1>Hot and Cold</h1>
 </header>
-
 <div>
     <button id="playButton" onclick="reset()">Play</button>
 </div>
-
 <body>    
     <p id="guess">Guess: </p>
     <p id="guesses">Guesses Left: </p>
-    <div>
-        <button class="numedit" data-param="-1">-1</button>
-        <button class="numedit" data-param="-5">-5</button>
-        <button class="numedit" data-param="-10">-10</button>
-        <button class="numedit" data-param="-25">-25</button>
+    <div id="numPanel">
+        <div>
+            <button class="numedit" data-param="-1">-1</button>
+            <button class="numedit" data-param="-5">-5</button>
+            <button class="numedit" data-param="-10">-10</button>
+            <button class="numedit" data-param="-25">-25</button>
+        </div>
+        <div>
+            <button class="numedit" data-param="1">+1</button>
+            <button class="numedit" data-param="5">+5</button>
+            <button class="numedit" data-param="10">+10</button>
+            <button class="numedit" data-param="25">+25</button>
+        </div>
     </div>
-    <div>
-        <button class="numedit" data-param="1">+1</button>
-        <button class="numedit" data-param="5">+5</button>
-        <button class="numedit" data-param="10">+10</button>
-        <button class="numedit" data-param="25">+25</button>
+
+    <div id="gamePanel">
+        <button id="commitButton">Commit</button>
+        <button id="resetButton">Reset</button>
     </div>
-    <button id="commitButton">Commit</button>
-    <button id="resetButton">Reset</button>
 
     <script src="script.js"></script>
 </body>

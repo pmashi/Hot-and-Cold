@@ -1,3 +1,8 @@
+html, body { 
+    margin: 0;
+    padding: 0; 
+}
+
 header { 
     font-size: 5vw;
     position: top;
@@ -20,4 +25,14 @@ header {
 
 .resetButton { 
     
+}
+
+#numPanel { 
+    /* aspect-ratio: 1; */
+    /* margin: 0 0 0; */
+    align-items: center;    
+}
+
+#gamePanel { 
+    align-items: center;
 }
