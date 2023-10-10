@@ -3,41 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-
-    </style>
+    <link rel="icon" href="img/steaming_cup.png" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Hot and Cold: Number Guessing Game</title>
 </head>
+
 <header>
     <h1>Hot and Cold</h1>
 </header>
-<div>
-    <button id="playButton" onclick="reset()">Play</button>
-</div>
-<body>    
-    <p id="guess">Guess: </p>
-    <p id="guesses">Guesses Left: </p>
-    <div id="numPanel">
-        <div>
-            <button class="numedit" data-param="-1">-1</button>
-            <button class="numedit" data-param="-5">-5</button>
-            <button class="numedit" data-param="-10">-10</button>
-            <button class="numedit" data-param="-25">-25</button>
+
+
+<body>  
+    <div>
+        <button id="playButton" onclick="play()">Play</button>
+    </div>  
+    <div id="center">
+        <img class="nav" src="img/ice-cube.png"/>
+        <div id="numPanel">
+            <p id="guess">Guess:</p>
+            <p id="guesses">Guesses Left:</p>
+            <div>
+                <button class="numedit" data-param="-1">-1</button>
+                <button class="numedit" data-param="-5">-5</button>
+                <button class="numedit" data-param="-10">-10</button>
+                <button class="numedit" data-param="-25">-25</button>
+            </div>
+            <br/>
+            <div>
+                <button class="numedit" data-param="1">+1</button>
+                <button class="numedit" data-param="5">+5</button>
+                <button class="numedit" data-param="10">+10</button>
+                <button class="numedit" data-param="25">+25</button>
+            </div>
+            <p id="hint"></p>
+            <div id="gamePanel">
+                <button id="commitButton">Commit</button>
+                <button id="resetButton">Reset</button>
+            </div>
         </div>
-        <div>
-            <button class="numedit" data-param="1">+1</button>
-            <button class="numedit" data-param="5">+5</button>
-            <button class="numedit" data-param="10">+10</button>
-            <button class="numedit" data-param="25">+25</button>
-        </div>
+        <img class="nav" src="img/steaming_cup.png"/>
     </div>
 
-    <div id="gamePanel">
-        <button id="commitButton">Commit</button>
-        <button id="resetButton">Reset</button>
-    </div>
+    
 
     <script src="script.js"></script>
 </body>
