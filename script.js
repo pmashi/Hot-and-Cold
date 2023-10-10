@@ -1,6 +1,7 @@
 var val;
 var guesses; 
 sessionStorage.setItem('p', false); 
+
 var playing = false; 
 function play() { 
     sessionStorage.setItem('p', true); 
@@ -8,9 +9,12 @@ function play() {
     reset(); 
 }
 function reset() { 
-    if(sessionStorage.getItem('p')) {
-        playing = true; 
-    }
+    console.log(sessionStorage.getItem('p'));
+
+    if(sessionStorage.getItem('p') == 'false') {
+        return;  
+    } else playing = true; 
+
     ans = parseInt(Math.random() * 100 + 1);
     ans = ans.toString(32);
     sessionStorage.setItem("g", ans)
@@ -66,6 +70,7 @@ function displayHint() {
         hintText.innerHTML = hintMsg[id];
         playing = false; 
     } else {
+        if(!(id == 1)) guesses--; 
         hintText.innerHTML = "You are " + hintMsg[id]; 
     }
 }
