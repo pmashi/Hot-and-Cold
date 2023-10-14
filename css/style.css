@@ -49,6 +49,10 @@ img {
     width: 10.8vmax;
     height: 3.2vmax;
     font-size:24px;
+    font-family: 'Roboto' sans-serif;
+    background-color: aquamarine;
+    border-color: aquamarine;
+    border-radius: 15px;
     margin: 0 auto; 
     display: block; 
 }
@@ -76,34 +80,60 @@ img {
     border-color: rgb(10, 94, 55);
     background-color: rgb(13, 122, 71);
     color: white; 
-    border: none; 
     font-weight: bold;
-    font-size: 15px;
-    cursor: pointer; 
+    font-size: 15px; 
     margin-left: 16px; 
-    transition: box-shadow 0.15s; 
-}
-
-.numedit:hover { 
-    box-shadow: 10px;
 }
 
 #hint { 
-    font-size:large;
+    font-size: large;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
-.commitButton { 
-     
+#commitButton { 
+    width: 20vw; 
+    height: 3vw;
+    background-color:orange;
+    color: black;
+    border-color: orange;
+    border-radius: 10px;
+    font-size: larger;
 }
 
-.resetButton { 
-    
+#resetButton { 
+    width: 20vw; 
+    height: 3vw;
+    background-color: blue;
+    color: white; 
+    border-color: blue;
+    border-radius: 10px;
+    font-size: larger;
 }
 
+@media (max-width:1200px) { 
+    #commitButton, #resetButton { 
+        height: 10vw;
+    }
+}
 
 #gamePanel { 
     display: flex;
     justify-content:space-around;
     align-items: center;
+}
+
+#guessLog { 
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+}
+
+#playBook { 
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    width: 33%;
 }

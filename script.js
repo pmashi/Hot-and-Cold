@@ -9,10 +9,10 @@ function play() {
     reset(); 
 }
 function reset() { 
-    console.log(sessionStorage.getItem('p'));
+    // console.log(sessionStorage.getItem('p'));
 
-    if(sessionStorage.getItem('p') == 'false') {
-        return;  
+    if(sessionStorage.getItem('p') === 'false') {
+        return;      
     } else playing = true; 
 
     ans = parseInt(Math.random() * 100 + 1);
@@ -23,6 +23,7 @@ function reset() {
     guesses = 5; 
     
     hintText.innerHTML = "";
+    resetLog();
     display(); 
 }
 
@@ -64,17 +65,35 @@ function getHintId() {
     if(diff < 56) return 7;
     return 8;
 }
+
 function displayHint() { 
     id = getHintId(); 
     if(id == 0) { 
         hintText.innerHTML = hintMsg[id];
         playing = false; 
+        console.log(playing);
     } else {
-        if(!(id == 1)) guesses--; 
+        if(!(parseInt(id) == 1)) {
+            guesses--;
+            displayGuesses();
+            if(guesses == 0) { 
+                hintText.innerHTML = "You lose!";
+                playing = false; 
+                return; 
+            } 
+        }
         hintText.innerHTML = "You are " + hintMsg[id]; 
     }
+    updateLog(id);
 }
 
+function updateLog(i) { 
+    guessLog.innerHTML += "Guess: " + val + ", Hint: " + hintMsg[i] + " | "; 
+}
+
+function resetLog() { 
+    guessLog.innerHTML = "Log: | "; 
+}
 // Start or Reset the game
 playButton = document.getElementById("playButton");
 resetButton = document.getElementById("resetButton")
@@ -83,6 +102,7 @@ commitButton = document.getElementById('commitButton');
 guessText = document.getElementById("guess"); 
 guessesText = document.getElementById("guesses"); 
 hintText = document.getElementById("hint"); 
+guessLog = document.getElementById("guessLog");
 
 // playButton.addEventListener("click", reset); 
 resetButton.addEventListener("click", reset);
